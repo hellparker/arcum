@@ -1,0 +1,36 @@
+#!/bin/bash
+
+##01##
+
+## IDENTIFY SDA
+
+# root
+RN=7
+
+# swap
+SN=8
+
+#UEFI
+UN=2
+
+## FORMAT PARTITIONS
+
+# Root
+mkfs.ext4 /dev/sda$RN
+
+# Swap
+mkswap /dev/sda$SN
+
+## Mount partitions
+
+# Root
+mount /dev/sda$RN /mnt
+
+# Swap
+swapon /dev/sda$SN
+
+#UEFI
+mkdir /mnt/boot/efi
+
+mount /dev/sda$UN /mnt/boot/efi
+

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+##11##
+
+## install desktop environment
+
+pacman -S xfce4 xfce4-goodies
+
