@@ -4,13 +4,16 @@
 
 ## INSTALL & CONFIGURE BOOTLOADER
 
+# root
+RN=8
+
 pacman -S refind-efi
 
 refind-install
 
 echo ""Boot using default options"" >> /boot/refind_linux.conf
 
-blkid /dev/sda5 >> /boot/refind_linux.conf
+blkid /dev/sda$RN >> /boot/refind_linux.conf
 
 echo "rw add_efi_memmap initrd=boot\intel-ucode.img initrd=boot\initramfs-linux.img" >> /boot/refind_linux.conf
 
