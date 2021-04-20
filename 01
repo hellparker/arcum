@@ -5,13 +5,13 @@
 ## IDENTIFY SDA
 
 # root
-RN=7
+RN=8
 
 # swap
-SN=8
+SN=7
 
 #UEFI
-UN=2
+UN=1
 
 ## FORMAT PARTITIONS
 
