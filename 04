@@ -4,6 +4,8 @@
 # Generate the locale
 locale-gen
 
+echo "LANG=en_US.UTF-8" >> /etc/locale.conf
+
 # Select the system language
 localectl set-locale LANG=en_US.UTF-8
 
@@ -11,5 +13,5 @@ localectl set-locale LANG=en_US.UTF-8
 tzselect
 
 # choosing your area
-ln -s /usr/share/zoneinfo/America/La_Paz /etc/localtime
-
+ln -sf /usr/share/zoneinfo/America/La_Paz /etc/localtime
+hwclock --systohc
