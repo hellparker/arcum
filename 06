@@ -7,7 +7,7 @@
 # root
 RN=8
 
-pacman -S refind-efi
+pacman -S refind
 
 refind-install
 
