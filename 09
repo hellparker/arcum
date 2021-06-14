@@ -2,8 +2,11 @@
 
 ##09##
 
+# For hibrid video cards
+pacman -S mesa
+
 # For Intel video cards
-pacman -S xf86-video-intel
+# pacman -S xf86-video-intel
 
 # For nVidia video cards
 # pacman -S nvidia
