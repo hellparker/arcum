@@ -8,7 +8,7 @@ pacman -S sudo
 
 useradd -m -G wheel,storage,power mechalar
 
-passwd mechalar
+echo ermanno:password | chpasswd
 
 EDITOR=nano visudo
 
