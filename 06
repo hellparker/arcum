@@ -5,7 +5,7 @@
 ## INSTALL & CONFIGURE BOOTLOADER
 
 # root
-RN=8
+RN=6
 
 pacman -S refind
 
