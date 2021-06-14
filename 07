@@ -4,7 +4,7 @@
 
 ## COMPUTER NAME & HOST
 
-passwd
+echo root:password | chpasswd
 
 echo Arco > /etc/hostname
 
