@@ -4,7 +4,7 @@
 
 ##INSTALL KERNEL
 
-pacman -S intel-ucode
+pacman -S intel-ucode base-devel
 
 ls /boot
 
