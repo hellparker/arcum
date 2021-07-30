@@ -4,12 +4,18 @@
 
 ## INSTALL & CONFIGURE BOOTLOADER
 
+#UEFI
+UN=1
+
 # root
-RN=6
+RN=3
 
 pacman -S refind
 
-refind-install
+# refind-install --usedefault /dev/sda$UN --alldrivers
+# mkrlconf
+
+refind-install 
 
 echo ""Boot using default options"" >> /boot/refind_linux.conf
 
