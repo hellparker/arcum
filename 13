@@ -4,7 +4,7 @@
 
 ## INSTALL & ENABLE NETWORK -AUDIO
 
-pacman -S wpa_supplicant wireless_tools networkmanager  network-manager-applet  pavucontrol  alsa-utils sof-firmware tlp firefox gnome-tweaks
+pacman -S wpa_supplicant wireless_tools networkmanager  network-manager-applet dialog pavucontrol  alsa-utils sof-firmware tlp firefox gnome-tweaks
 
 systemctl enable NetworkManager.service
 systemctl enable tlp
