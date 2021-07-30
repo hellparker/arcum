@@ -1,6 +1,13 @@
 #!/bin/bash
 
 ##04##
+
+## Generating system locale
+nano /etc/locale.gen
+
+# Uncomment
+# en_US.UTF-8:
+
 # Generate the locale
 locale-gen
 
