@@ -4,8 +4,6 @@
 
 ## REGULAR USER
 
-pacman -S sudo
-
 useradd -m -G wheel,storage,power mechalar
 
 #echo ermanno:password | chpasswd
