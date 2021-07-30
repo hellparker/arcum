@@ -3,5 +3,5 @@
 ##02##
 
 ## Install Arch Linux
-pacstrap -i /mnt base base-devel nano
+pacstrap -i /mnt base linux linux-firmware nano
 
