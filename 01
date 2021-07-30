@@ -21,6 +21,9 @@ mkfs.ext4 /dev/sda$RN
 # Swap
 mkswap /dev/sda$SN
 
+#UEFI
+mkfs.fat -F32 /dev/sda$UN
+
 ## Mount partitions
 
 # Root
