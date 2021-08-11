@@ -1,18 +1,18 @@
 #!/bin/bash
-## 06 ##
-## INSTALL & CONFIGURE BOOTLOADER
 
-pacman -S refind
+##06##
 
-refind-install
-RN=6
-echo ""Boot using default options"" >> /boot/refind_linux.conf
+## REGULAR USER
 
-blkid /dev/sda$RN >> /boot/refind_linux.conf
+passwd
 
-echo "rw add_efi_memmap initrd=boot\intel-ucode.img initrd=boot\initramfs-linux.img" >> /boot/refind_linux.conf
+useradd -m -G wheel,storage,power mechalar
 
-nano /boot/refind_linux.conf
+passwd mechalar
 
-# "Boot using default options" "root=PARTUUID=xxx rw add_efi_memmap initrd=boot\intel-ucode.img initrd=boot\initramfs-linux.img"
+EDITOR=nano visudo
+
+# Uncomment
+# %wheel ALL=(ALL) ALL
+
 
