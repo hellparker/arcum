@@ -1,11 +1,19 @@
 #!/bin/bash
-## 05 ##
-##INSTALL KERNEL
 
-pacman -S intel-ucode linux linux-firmware
+##05##
 
-ls /boot
+## COMPUTER NAME & HOST
 
-# file vmlinuz-linux
+
+
+echo Arco > /etc/hostname
+
+echo "127.0.0.1 localhost" >> /etc/hosts
+
+echo "::1       localhost" >> /etc/hosts
+
+echo "127.0.1.1 Arco.localdomain Arco" >> /etc/hosts
+
+nano /etc/hosts
 
 
