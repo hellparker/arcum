@@ -1,15 +1,13 @@
 #!/bin/bash
-## 08 ##
-## REGULAR USER
 
-pacman -S sudo
+##08##
 
-useradd -m -G wheel,storage,power mechalar
+# For Intel video cards
+# pacman -S xf86-video-intel
 
-passwd mechalar
+pacman -S mesa
 
-EDITOR=nano visudo
+# For nVidia video cards
+# pacman -S nvidia
 
-# Uncomment
-# %wheel ALL=(ALL) ALL
 
