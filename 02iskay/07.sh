@@ -1,17 +1,25 @@
 #!/bin/bash
-## 07 ##
 
-## COMPUTER NAME & HOST
+##06##
 
-passwd
+## INSTALL & CONFIGURE BOOTLOADER
 
-echo Strix > /etc/hostname
+# root
+RootN=8
 
-echo "127.0.0.1 localhost" >> /etc/hosts
+pacman -S refind
 
-echo "::1       localhost" >> /etc/hosts
+refind-install
 
-echo "127.0.0.1 Arco" >> /etc/hosts
+# refind-install --usedefault /dev/sdXY
 
-nano /etc/hosts
+echo ""Boot using default options"" >> /boot/refind_linux.conf
+
+blkid /dev/sda$RootN >> /boot/refind_linux.conf
+
+echo "rw add_efi_memmap initrd=boot\intel-ucode.img initrd=boot\initramfs-linux.img" >> /boot/refind_linux.conf
+
+nano /boot/refind_linux.conf
+
+# "Boot using default options" "root=PARTUUID=xxx rw add_efi_memmap initrd=boot\intel-ucode.img initrd=boot\initramfs-linux.img"
 
