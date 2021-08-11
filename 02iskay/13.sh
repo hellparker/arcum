@@ -1,9 +1,13 @@
 #!/bin/bash
-## 13 ##
+
+##13##
+
 ## INSTALL & ENABLE NETWORK -AUDIO
 
-pacman -S wpa_supplicant wireless_tools networkmanager nm-connection-editor network-manager-applet gnome-keyring pavucontrol pulseaudio alsa-utils sof-firmware alsa-ucm-conf
+pacman -S wpa_supplicant wireless_tools networkmanager nm-connection-editor network-manager-applet  pavucontrol pulseaudio alsa-utils sof-firmware alsa-ucm-conf tlp ntfs-3g curl dialog
 
 systemctl enable NetworkManager.service
+systemctl enable tlp
+# systemctl enable fstrim.timer
 
-systemctl enable lightdm.service
+#systemctl enable lightdm.service
