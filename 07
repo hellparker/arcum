@@ -1,20 +1,26 @@
 #!/bin/bash
 
-##07##
+##06##
 
-## COMPUTER NAME & HOST
+## INSTALL & CONFIGURE BOOTLOADER
 
-#echo root:password | chpasswd
+# root
+RootN=8
 
-password
+pacman -S refind
 
-echo Arco > /etc/hostname
+refind-install
 
-echo "127.0.0.1 localhost" >> /etc/hosts
+# refind-install --usedefault /dev/sdXY
 
-echo "::1       localhost" >> /etc/hosts
+echo ""Boot using default options"" >> /boot/refind_linux.conf
 
-echo "127.0.0.1 Arco" >> /etc/hosts
+blkid /dev/sda$RootN >> /boot/refind_linux.conf
 
-nano /etc/hosts
+echo "rw add_efi_memmap initrd=boot\intel-ucode.img initrd=boot\initramfs-linux.img" >> /boot/refind_linux.conf
+
+nano /boot/refind_linux.conf
+
+# "Boot using default options" "root=PARTUUID=xxx rw add_efi_memmap initrd=boot\intel-ucode.img initrd=boot\initramfs-linux.img"
+
 
