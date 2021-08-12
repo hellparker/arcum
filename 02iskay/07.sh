@@ -5,7 +5,7 @@
 ## INSTALL & CONFIGURE BOOTLOADER
 
 # root
-RootN=8
+RootN=3
 
 pacman -S refind
 
