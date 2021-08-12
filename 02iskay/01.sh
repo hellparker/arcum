@@ -22,3 +22,4 @@ mount /dev/sda$UefiN /mnt/efi
 swapon /dev/sda$SwapN
 # Root
 mount /dev/sda$RootN /mnt
+
