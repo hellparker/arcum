@@ -5,24 +5,24 @@
 ## IDENTIFY SDA
 
 # root
-RN=6
+RootN=3
 
 # swap
-SN=5
+SwapN=2
 
 #UEFI
-UN=2
+UEFIN=1
 
 ## FORMAT PARTITIONS
 
 # Root
-mkfs.ext4 /dev/sda$RN
+mkfs.ext4 /dev/sda$RootN
 
 # Swap
-mkswap /dev/sda$SN
+mkswap /dev/sda$SwapN
 
 #UEFI
-mkfs.fat -F32 /dev/sda$UN
+mkfs.fat -F32 /dev/sda$UEFIN
 
 ## Mount partitions
 
@@ -33,6 +33,6 @@ mount /dev/sda$RN /mnt
 swapon /dev/sda$SN
 
 #UEFI
-mkdir /mnt/boot
-mount /dev/sda$UN /mnt/boot
+mkdir /mnt/efi
+mount /dev/sda$UN /mnt/efi
 
