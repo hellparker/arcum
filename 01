@@ -27,12 +27,12 @@ mkfs.fat -F32 /dev/sda$UEFIN
 ## Mount partitions
 
 # Root
-mount /dev/sda$RN /mnt
+mount /dev/sda$RootN /mnt
 
 # Swap
-swapon /dev/sda$SN
+swapon /dev/sda$SwapN
 
 #UEFI
 mkdir /mnt/efi
-mount /dev/sda$UN /mnt/efi
+mount /dev/sda$UEFIN /mnt/efi
 
