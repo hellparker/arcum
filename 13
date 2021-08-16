@@ -8,6 +8,7 @@ pacman -S wpa_supplicant wireless_tools networkmanager nm-connection-editor netw
 
 systemctl enable NetworkManager.service
 systemctl enable tlp
+systemctl enable gdm
 # systemctl enable fstrim.timer
 
 #systemctl enable lightdm.service
