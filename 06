@@ -6,9 +6,9 @@
 
 passwd
 
-useradd -m -G wheel,storage,power mechalar
+useradd -m -G wheel,storage,power etxalar
 
-passwd mechalar
+passwd etxalar
 
 EDITOR=nano visudo
 
