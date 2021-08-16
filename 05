@@ -6,13 +6,13 @@
 
 
 
-echo Arco > /etc/hostname
+echo lasalle > /etc/hostname
 
 echo "127.0.0.1 localhost" >> /etc/hosts
 
 echo "::1       localhost" >> /etc/hosts
 
-echo "127.0.1.1 Arco.localdomain Arco" >> /etc/hosts
+echo "127.0.1.1 lasalle.localdomain lasalle" >> /etc/hosts
 
 nano /etc/hosts
 
