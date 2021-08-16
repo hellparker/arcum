@@ -3,6 +3,7 @@
 ##04##
 
 reflector --country Brazil,Argentina,Chile --sort rate -l 5 --save /etc/pacman.d/mirrorlist
+pacman -Sy
 
 # Time zone
 ln -sf /usr/share/zoneinfo/America/La_Paz /etc/localtime
