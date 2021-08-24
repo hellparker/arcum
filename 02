@@ -2,9 +2,6 @@
 
 ##02##
 
-reflector --country Brazil,Argentina,Chile --sort rate -l 10 --save /etc/pacman.d/mirrorlist
-pacman -Sy
-
 ## Install Arch Linux
 pacstrap /mnt base linux linux-firmware intel-ucode rsync reflector nano git base-devel
 
