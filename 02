@@ -3,5 +3,5 @@
 ##02##
 
 ## Install Arch Linux
-pacstrap /mnt base linux linux-firmware intel-ucode rsync reflector nano git base-devel
+pacstrap /mnt base linux linux-firmware intel-ucode rsync reflector nano git wget
 
