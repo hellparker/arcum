@@ -2,9 +2,5 @@
 
 ##06##
 
-## ROOT USER
-
-
-echo root:password | chpasswd
-
-
+# Root password
+echo root:44302 | chpasswd
