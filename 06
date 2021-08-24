@@ -2,18 +2,9 @@
 
 ##06##
 
-## REGULAR USER
+## ROOT USER
 
-passwd
 
-useradd -m -G wheel,storage,power etxalar
-
-passwd etxalar
-
-EDITOR=nano visudo
-
-# Uncomment
-# %wheel ALL=(ALL) ALL
-
+echo root:password | chpasswd
 
 
