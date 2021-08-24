@@ -5,11 +5,3 @@
 # Install essential packages
 pacstrap /mnt base linux linux-firmware intel-ucode nano git wget
 
-
-# Fstab
-genfstab -U /mnt >> /mnt/etc/fstab
-
-
-# Chroot
-arch-chroot /mnt
-
