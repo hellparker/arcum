@@ -2,37 +2,30 @@
 
 ##01##
 
-## IDENTIFY SDA
-
+# Partition the disks
+#UEFI
+UEFIN=1
+# swap
+SwapN=2
 # root
 RootN=3
 
-# swap
-SwapN=2
 
+# Format the partitions
 #UEFI
-UEFIN=1
-
-## FORMAT PARTITIONS
-
+mkfs.fat -F32 /dev/sda$UEFIN
+# Swap
+mkswap /dev/sda$SwapN
 # Root
 mkfs.ext4 /dev/sda$RootN
 
-# Swap
-mkswap /dev/sda$SwapN
 
-#UEFI
-mkfs.fat -F32 /dev/sda$UEFIN
 
-## Mount partitions
-
-# Root
-mount /dev/sda$RootN /mnt
-
-# Swap
-swapon /dev/sda$SwapN
-
+# Mount the file systems
 #UEFI
 mkdir /mnt/efi
 mount /dev/sda$UEFIN /mnt/efi
-
+# Swap
+swapon /dev/sda$SwapN
+# Root
+mount /dev/sda$RootN /mnt
