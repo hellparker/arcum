@@ -2,14 +2,5 @@
 
 ##12##
 
-## INSTALL BOOTLOADER
-
-pacman -S lightdm lightdm-webkit2-greeter
-
-nano /etc/lightdm/lightdm.conf
-
-# uncomment
-#[Seat:*]
-# add
-# greeter-session = lightdm-webkit2-greeter
+sudo reflector --country Brazil,Paraguay,Chile --sort rate -l 10 --save /etc/pacman.d/mirrorlist
 
