@@ -2,12 +2,10 @@
 
 ##09##
 
-# For hibrid video cards
-pacman -S mesa
-
-# For Intel video cards
-# pacman -S xf86-video-intel
-
-# For nVidia video cards
-# pacman -S nvidia
+## Regular user
+useradd -m -G wheel,storage,power mechalar
+echo mechalar:44302 | chpasswd
+EDITOR=nano visudo
+# Uncomment
+# %wheel ALL=(ALL) ALL
 
