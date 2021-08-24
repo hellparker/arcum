@@ -2,10 +2,11 @@
 
 ##03##
 
-## Copy partitions
+# Fstab
 genfstab -U /mnt >> /mnt/etc/fstab
 
-## Chrooting into our system
+
+# Chroot
 arch-chroot /mnt
 
 
