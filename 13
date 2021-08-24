@@ -4,11 +4,27 @@
 
 ## INSTALL & ENABLE NETWORK -AUDIO
 
-pacman -S wpa_supplicant wireless_tools networkmanager nm-connection-editor network-manager-applet  pavucontrol pulseaudio alsa-utils sof-firmware alsa-ucm-conf tlp ntfs-3g curl dialog
+pacman -S wpa_supplicant wireless_tools networkmanager nm-connection-editor network-manager-applet  pavucontrol pulseaudio alsa-utils sof-firmware alsa-ucm-conf tlp ntfs-3g dialog base-devel
 
 systemctl enable NetworkManager.service
 systemctl enable tlp
-systemctl enable gdm
+
+
+
+
+useradd -m -G wheel,storage,power etxalar
+
+passwd etxalar
+
+EDITOR=nano visudo
+
+# Uncomment
+# %wheel ALL=(ALL) ALL
+
+
+
+
+
 # systemctl enable fstrim.timer
 
 #systemctl enable lightdm.service
