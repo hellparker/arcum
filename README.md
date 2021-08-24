@@ -20,3 +20,5 @@ Download manager
 Get the script:
 # pacman -S git
 # git clone git://github.com/hellparker/arcum
+# chmod -R +x /arcum
+# cd arcum
